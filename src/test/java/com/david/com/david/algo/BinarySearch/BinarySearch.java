@@ -1,4 +1,4 @@
-package com.david.com.david.algo;
+package com.david.com.david.algo.BinarySearch;
 
 /**
  * 二分查找
