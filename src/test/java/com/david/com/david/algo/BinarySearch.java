@@ -1,5 +1,9 @@
 package com.david.com.david.algo;
 
+/**
+ * 二分查找
+ * 不存在重复元素查找给出数字的下标
+ */
 public class BinarySearch {
     public static void main(String[] args) {
         int[] a = {1, 3, 6, 22, 45, 13234, 134241};
