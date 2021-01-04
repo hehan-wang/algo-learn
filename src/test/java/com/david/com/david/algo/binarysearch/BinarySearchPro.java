@@ -1,4 +1,4 @@
-package com.david.com.david.algo.BinarySearch;
+package com.david.com.david.algo.binarysearch;
 
 /**
  * 有序就可以使用二分查找
