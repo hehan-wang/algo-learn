@@ -39,13 +39,13 @@ public class LeetCode33 {
                 return mid;
             }
             if (nums[0] <= nums[mid]) {//左边有序 一定要加"="号!!!
-                if (target >= nums[0] && target < nums[mid]) {//target在左边在区间内 一定要加"="号!!!
+                if (target >= nums[0] && target < nums[mid]) {//target>=左边界 在左边区间内 一定要加"="号!!!
                     high = mid - 1;
                 } else {
                     low = mid + 1;
                 }
             } else {//右边有序
-                if (target > nums[mid] && target <= nums[n]) {//target在右边在区间内 一定要加"="号!!!
+                if (target > nums[mid] && target <= nums[n]) {//target<=右边界 在右边在区间内 一定要加"="号!!!
                     low = mid + 1;
                 } else {
                     high = mid - 1;
