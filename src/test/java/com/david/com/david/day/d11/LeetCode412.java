@@ -1,4 +1,4 @@
-package com.david.com.david.d20210107;
+package com.david.com.david.day.d11;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,9 +44,26 @@ import java.util.stream.IntStream;
 public class LeetCode412 {
     public static void main(String[] args) {
         System.out.println(fizzBuzz(16));
+        System.out.println(fizzBuzz1(16));
     }
 
     public static List<String> fizzBuzz(int n) {
         return IntStream.rangeClosed(1, n).parallel().mapToObj(s -> s % 15 == 0 ? "FizzBuzz" : s % 5 == 0 ? "Buzz" : s % 3 == 0 ? "Fizz" : String.valueOf(s)).collect(Collectors.toList());
+    }
+
+    public static List<String> fizzBuzz1(int n) {
+        List<String> res = new ArrayList<>();
+        for (int i = 1; i <= n; i++) {
+            if (i >= 15 & i % 15 == 0) {
+                res.add("FizzBuzz");
+            } else if (i % 5 == 0) {
+                res.add("Buzz");
+            } else if (i % 3 == 0) {
+                res.add("Fizz");
+            } else {
+                res.add(String.valueOf(i));
+            }
+        }
+        return res;
     }
 }
