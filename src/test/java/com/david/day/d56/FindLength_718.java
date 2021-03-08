@@ -3,7 +3,7 @@ package com.david.day.d56;
 public class FindLength_718 {
     public static void main(String[] args) {
         System.out.println(new Solution().findLength(new int[]{1, 2, 3, 2, 1}, new int[]{3, 2, 1, 4, 7}));
-        System.out.println(new Solution1().findLength(new int[]{1, 2, 3, 2, 1}, new int[]{3, 2, 1, 4, 7}));
+//        System.out.println(new Solution1().findLength(new int[]{1, 2, 3, 2, 1}, new int[]{3, 2, 1, 4, 7}));
     }
 
 
