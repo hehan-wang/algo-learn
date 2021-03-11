@@ -12,7 +12,7 @@ public class LengthOfLIS_300 {
 
     /**
      * dp
-     * 前i个元素的最大值
+     * 前i个元素的递增序列最大值
      * 当nums[i]>nums[j] 新增的i可以接在递增序列后面
      * dp[i]=max(dp[i],dp[j]+1)
      * time:O(n^2)
