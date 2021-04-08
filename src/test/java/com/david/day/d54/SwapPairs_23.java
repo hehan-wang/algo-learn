@@ -4,6 +4,8 @@ package com.david.day.d54;
  * 思路
  * 1.递归
  * 子问题为翻转链表 尾结点连接下一翻转子链
+ * 1-2-3-4
+ * 2-1-4-3
  */
 public class SwapPairs_23 {
     public static void main(String[] args) {
