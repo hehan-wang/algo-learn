@@ -7,6 +7,7 @@ public class RemoveOuterParentheses_1021 {
     public static void main(String[] args) {
         System.out.println(new RemoveOuterParentheses_1021().new Solution().removeOuterParentheses("(()())(())"));
         System.out.println(new RemoveOuterParentheses_1021().new Solution1().removeOuterParentheses("(()())(())"));
+        System.out.println(new RemoveOuterParentheses_1021().new Solution1().removeOuterParentheses("(abab)(cd)"));
     }
 
     /**

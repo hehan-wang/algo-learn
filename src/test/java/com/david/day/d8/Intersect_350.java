@@ -1,10 +1,11 @@
 package com.david.day.d8;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
 /**
+ * 输入：nums1 = [1,2,2,1], nums2 = [2,2]
+ * 输出：[2,2]
  * 思路
  * 1. num1 字符数量放入hash表 遍历2 字符存在-1 存在的话放入结果
  * 2. 先排序 双指针遍历两个数组 相等加入结果 不等移动当前元素小的
@@ -12,11 +13,11 @@ import java.util.HashMap;
  * 进阶
  * nums2很大不能加载到内存中只能使用hash法 分词读入nums2的一部分并行查找
  */
-public class Intersect_250 {
+public class Intersect_350 {
     public static void main(String[] args) {
 //        System.out.println(Arrays.toString(new Intersect_250().new Solution().intersect(new int[]{1, 2, 2, 1}, new int[]{2, 2})));
-        System.out.println(Arrays.toString(new Intersect_250().new Solution().intersect(new int[]{4, 9, 5}, new int[]{9, 4, 9, 8, 4})));
-        System.out.println(Arrays.toString(new Intersect_250().new Solution1().intersect(new int[]{4, 9, 5}, new int[]{9, 4, 9, 8, 4})));
+        System.out.println(Arrays.toString(new Intersect_350().new Solution().intersect(new int[]{4, 9, 5}, new int[]{9, 4, 9, 8, 4})));
+        System.out.println(Arrays.toString(new Intersect_350().new Solution1().intersect(new int[]{4, 9, 5}, new int[]{9, 4, 9, 8, 4})));
     }
 
     /**

@@ -5,6 +5,11 @@ import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+/**
+ * 输入: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
+ * 输出: 3
+ * 解释: 节点 5 和节点 1 的最近公共祖先是节点 3。
+ */
 public class LowestCommonAncestor_offer68 {
     static List<TreeNode> list = IntStream.rangeClosed(0, 9).mapToObj(TreeNode::new).collect(Collectors.toList());
 

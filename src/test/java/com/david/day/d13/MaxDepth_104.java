@@ -2,7 +2,9 @@ package com.david.day.d13;
 
 import javax.swing.tree.TreeNode;
 
-//TODO 二叉数最大深度
+/**
+ * 二叉数最大深度=max(左子树最大深度,右子树最大深度)
+ */
 public class MaxDepth_104 {
     public static void main(String[] args) {
 

@@ -3,6 +3,8 @@ package com.david.day.d4;
 
 public class SwapPairs_24 {
     /**
+     * 每次返回链表头
+     * 翻转链表尾指向下个链表头
      * 1->2->3->4
      * <p>
      * 2->1->4->3
