@@ -1,6 +1,6 @@
 package com.david.algo.basic;
 
-/**
+/**3
  *
  */
 public class JudgeSquareSum_633 {
