@@ -1,4 +1,4 @@
-package com.david.algo;
+package com.david.algo.interview.huohua;
 
 import java.util.ArrayList;
 import java.util.List;

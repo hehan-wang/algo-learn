@@ -1,4 +1,4 @@
-package com.david.algo.metuan;
+package com.david.algo.interview.metuan;
 
 import java.util.Scanner;
 import java.util.regex.Pattern;
