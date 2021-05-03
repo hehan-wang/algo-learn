@@ -34,11 +34,8 @@ public class LeastBricks_554 {
             for (List<Integer> row : wall) {
                 for (int j = 0, gap = 0; j < row.size() - 1; j++) {//最后一个元素忽略掉 因为都指向末尾边界 一块都没穿过
                     gap += row.get(j);
-                    map.compute(gap, (k, v) -> {//不存在置为1存在+1
-                        int v1 = v == null ? 1 : v + 1;
-                        maxGapCount.set(Math.max(maxGapCount.get(), v1));//存储最大值
-                        return v1;
-                    });
+                    Integer v1 = map.compute(gap, (k, v) -> v == null ? 1 : v + 1);//不存在置为1存在+1
+                    maxGapCount.set(Math.max(maxGapCount.get(), v1));//存储最大值
                 }
             }
             return wall.size() - maxGapCount.get();
