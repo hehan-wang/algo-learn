@@ -1,4 +1,4 @@
-package com.david.algo.basic.tree;
+package com.david.algo.tree;
 
 public class TreeNode {
     int val;

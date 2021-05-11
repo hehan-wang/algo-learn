@@ -1,4 +1,4 @@
-package com.david.algo.basic.stack;
+package com.david.algo.stack;
 
 import java.util.Arrays;
 import java.util.LinkedList;
