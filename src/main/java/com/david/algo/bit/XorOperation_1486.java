@@ -15,7 +15,7 @@ public class XorOperation_1486 {
         System.out.println(new XorOperation_1486().new Solution2().xorOperation(5, 0));
     }
 
-    //数学法
+    //数学法 O(1)
     class Solution2 {
         public int xorOperation(int n, int start) {
             // 结果的最低位
