@@ -1,8 +1,8 @@
 package com.david.algo.basic;
 
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
     ListNode() {
     }
