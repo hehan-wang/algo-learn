@@ -10,7 +10,6 @@ public class RomanToInt_13 {
     public static void main(String[] args) {
         System.out.println(new RomanToInt_13().new Solution().romanToInt("MCMXCIV"));
         System.out.println(new RomanToInt_13().new Solution1().romanToInt("MCMXCIV"));
-        System.out.println(new RomanToInt_13().new Solution4().romanToInt("MCMXCIV"));
 //        System.out.println("MCMXCIV".substring(0, 1));
     }
 
