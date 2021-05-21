@@ -62,29 +62,4 @@ public class KthLargestValue_1738 {
             return minHeap.peek();
         }
     }
-
-    /**
-     * 在1的基础上判断 k>m*n/2的情况 转化为求第几 (m*n-k) 小个元素
-     */
-    class Solution2 {
-        public int kthLargestValue(int[][] matrix, int k) {
-            int m = matrix.length, n = matrix[0].length;
-            PriorityQueue<Integer> minHeap = new PriorityQueue<>(Comparator.naturalOrder());
-            int[][] dp = new int[m + 1][n + 1];
-            for (int i = 1; i <= m; i++) {
-                for (int j = 1; j <= n; j++) {
-                    dp[i][j] = dp[i - 1][j] ^ dp[i][j - 1] ^ dp[i - 1][j - 1] ^ matrix[i - 1][j - 1];
-                    if (minHeap.size() < k) {//最大的数字的个数<k 直接放入堆中
-                        minHeap.offer(dp[i][j]);
-                    } else {
-                        if (dp[i][j] > minHeap.peek()) {//最大的数字的个数>=k 而且当前数字大于堆底元素则弹出堆顶的小元素 放入当前元素
-                            minHeap.poll();
-                            minHeap.offer(dp[i][j]);
-                        }
-                    }
-                }
-            }
-            return minHeap.peek();
-        }
-    }
 }
