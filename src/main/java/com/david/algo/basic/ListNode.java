@@ -15,4 +15,11 @@ public class ListNode {
         this.val = val;
         this.next = next;
     }
+
+    public static void print(ListNode root) {
+        while (root != null) {
+            System.out.print(root.val + "\t");
+            root = root.next;
+        }
+    }
 }
