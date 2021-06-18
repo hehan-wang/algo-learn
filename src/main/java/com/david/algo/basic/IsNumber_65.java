@@ -25,6 +25,7 @@ public class IsNumber_65 {
     }
 
 
+
     /**
      * 模拟法
      */
