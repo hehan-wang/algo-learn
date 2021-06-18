@@ -24,6 +24,7 @@ public class IsNumber_65 {
         System.out.println(new IsNumber_65().new Solution().isNumber("-1."));
     }
 
+
     /**
      * 模拟法
      */
