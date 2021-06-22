@@ -3,6 +3,7 @@ package com.david.algo.backtrack;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -15,6 +16,33 @@ public class Permutation_offer38 {
 //        System.out.println(Arrays.toString(new Permutation_offer38().new Solution().permutation("abc")));
         System.out.println(Arrays.toString(new Permutation_offer38().new Solution().permutation("aab")));
         System.out.println(Arrays.toString(new Permutation_offer38().new Solution1().permutation("aab")));
+        System.out.println(Arrays.toString(new Permutation_offer38().new Solution2().permutation("aab")));
+    }
+
+    class Solution2 {
+        Set<String> res = new HashSet<>();
+        char[] chars;
+        boolean[] used;
+
+        public String[] permutation(String s) {
+            chars = s.toCharArray();
+            used = new boolean[s.length()];
+            backtrack(0, "");
+            return res.toArray(new String[]{});
+        }
+
+        private void backtrack(int i, String tmp) {
+            if (i == chars.length) {
+                res.add(tmp);
+                return;
+            }
+            for (int j = 0; j < chars.length; j++) {
+                if (used[j]) continue;
+                used[j] = true;
+                backtrack(i + 1, tmp + chars[j]);
+                used[j] = false;
+            }
+        }
     }
 
     /**
