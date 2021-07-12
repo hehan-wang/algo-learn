@@ -23,9 +23,10 @@ public class HIndex_274 {
         System.out.println(new HIndex_274().new Solution().hIndex(new int[]{100}));
         System.out.println("================================================");
 
-        System.out.println(new HIndex_274().new Solution2().hIndex(new int[]{3, 0, 6, 1, 5}));
-        System.out.println(new HIndex_274().new Solution2().hIndex(new int[]{0}));
-        System.out.println(new HIndex_274().new Solution2().hIndex(new int[]{100}));
+        System.out.println(new HIndex_274().new Solution3().hIndex(new int[]{3, 0, 6, 1, 5}));
+        System.out.println(new HIndex_274().new Solution3().hIndex(new int[]{0}));
+        System.out.println(new HIndex_274().new Solution3().hIndex(new int[]{100}));
+//        System.out.println(new HIndex_274().new Solution3().hIndex(new int[]{1, 2, 2, 2}));
     }
 
     /**
@@ -47,7 +48,8 @@ public class HIndex_274 {
      * 计数排序
      * 1.先遍历一次把每个数字的数量统计出来。因为数组长度为n，结果最大只能是n，所以大于n的放在一起。
      * 2.n从大到小遍历，计数加和，找到了返回
-     * O(n)
+     * 时间复杂度:O(n) 两次遍历与citations.length成正比 O(2*n) ->O(n)
+     * 空间复杂度:O(n) 额外counter开辟citations.length+1长度数组
      */
     class Solution2 {
         public int hIndex(int[] citations) {
@@ -65,4 +67,22 @@ public class HIndex_274 {
         }
     }
 
+    /**
+     * 排序+二分
+     * 排序后h为后面的元素个数 h=n-index
+     * 使用二分法夹逼迫
+     */
+    class Solution3 {
+        public int hIndex(int[] citations) {
+            Arrays.sort(citations);
+            int n = citations.length, left = 0, right = n - 1;
+            while (left < right) {
+                int mid = (right + left) >> 1;
+                if (citations[mid] >= n - mid) right = mid;
+                else left = mid + 1;
+            }
+            int h = n - left;
+            return citations[left] >= h ? h : 0;
+        }
+    }
 }
